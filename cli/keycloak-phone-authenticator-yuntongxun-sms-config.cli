@@ -1,0 +1,3 @@
+/subsystem=keycloak-server:list-add(name=providers,value=module:org.hfx.keycloak-phone-authenticator)
+/subsystem=keycloak-server:list-add(name=providers,value=module:org.hfx.keycloak-phone-authenticator-yuntongxun-sms)
+/subsystem=keycloak-server:list-add(name=providers,value=module:yuntongxun4j)
