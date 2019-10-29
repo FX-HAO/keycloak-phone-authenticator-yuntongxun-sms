@@ -1,8 +1,8 @@
-package org.hfx.keycloak;
+package com.hfx.keycloak;
 
 import org.keycloak.Config;
-import org.hfx.keycloak.spi.SmsServiceProviderFactory;
-import org.hfx.keycloak.spi.SmsService;
+import com.hfx.keycloak.spi.SmsServiceProviderFactory;
+import com.hfx.keycloak.spi.SmsService;
 import org.keycloak.models.KeycloakSession;
 import org.keycloak.models.KeycloakSessionFactory;
 

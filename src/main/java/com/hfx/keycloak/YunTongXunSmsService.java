@@ -1,7 +1,7 @@
-package org.hfx.keycloak;
+package com.hfx.keycloak;
 
 import okhttp3.Response;
-import org.hfx.keycloak.spi.SmsService;
+import com.hfx.keycloak.spi.SmsService;
 import org.keycloak.models.KeycloakSession;
 import yuntongxun4j.YunTongXun;
 import yuntongxun4j.YunTongXunFactory;
