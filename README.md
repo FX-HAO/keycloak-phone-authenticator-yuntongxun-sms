@@ -29,8 +29,8 @@ See [yuntongxun4j](https://github.com/FX-HAO/yuntongxun4j) for more details.
 Firstly, adding the modules into your wildfly server.
 
 ```
-> $KEYCLOAK_HOME/bin/jboss-cli.sh --command="module add --name=com.hfx.keycloak-phone-authenticator-yuntongxun-sms --resources=target/keycloak-phone-authenticator-yuntongxun-sms-7.0.0-SNAPSHOT.jar --dependencies=org.keycloak.keycloak-server-spi,com.hfx.keycloak-phone-authenticator,yuntongxun4j,com.squareup.okhttp3"
-> $KEYCLOAK_HOME/bin/jboss-cli.sh --command="module add --name=com.hfx.keycloak-phone-authenticator --resources=~/.m2/repository/org/hfx/keycloak-phone-authenticator/7.0.0-SNAPSHOT/keycloak-phone-authenticator-7.0.0-SNAPSHOT.jar --dependencies=org.keycloak.keycloak-core,org.keycloak.keycloak-common,org.hibernate,org.keycloak.keycloak-server-spi,org.keycloak.keycloak-server-spi-private,org.keycloak.keycloak-services,org.keycloak.keycloak-model-jpa,org.jboss.logging,javax.api,javax.ws.rs.api,javax.transaction.api,javax.persistence.api,org.jboss.resteasy.resteasy-jaxrs,org.apache.httpcomponents,org.apache.commons.lang"
+> $KEYCLOAK_HOME/bin/jboss-cli.sh --command="module add --name=com.hfx.keycloak-phone-authenticator-yuntongxun-sms --resources=target/keycloak-phone-authenticator-yuntongxun-sms.jar --dependencies=org.keycloak.keycloak-server-spi,com.hfx.keycloak-phone-authenticator,yuntongxun4j,com.squareup.okhttp3"
+> $KEYCLOAK_HOME/bin/jboss-cli.sh --command="module add --name=com.hfx.keycloak-phone-authenticator --resources=~/.m2/repository/com/hfx/keycloak-phone-authenticator/7.0.0-SNAPSHOT/keycloak-phone-authenticator-7.0.0-SNAPSHOT.jar --dependencies=org.keycloak.keycloak-core,org.keycloak.keycloak-common,org.hibernate,org.keycloak.keycloak-server-spi,org.keycloak.keycloak-server-spi-private,org.keycloak.keycloak-services,org.keycloak.keycloak-model-jpa,org.jboss.logging,javax.api,javax.ws.rs.api,javax.transaction.api,javax.persistence.api,org.jboss.resteasy.resteasy-jaxrs,org.apache.httpcomponents,org.apache.commons.lang"
 > $KEYCLOAK_HOME/bin/jboss-cli.sh --command="module add --name=yuntongxun4j --resources=~/.m2/repository/org/yuntongxun4j/yuntongxun4j/1.0-SNAPSHOT/yuntongxun4j-1.0-SNAPSHOT.jar --dependencies=com.squareup.okhttp3,javax.xml.bind.api,com.google.code.gson"
 ```
 
@@ -52,7 +52,6 @@ Or you can register the modules with `jboss-cli.sh`: `$KEYCLOAK_HOME/bin/jboss-c
 Finally, you need copy the theme files into `$KEYCLOAK_HOME/themes/base/login`:
 ```
 > cp src/main/resources/theme-resources/templates/* $KEYCLOAK_HOME/themes/base/login/
-> cat messages/messages_en.properties $KEYCLOAK_HOME/theme/base/login/messages/messages_en.properties
-> cat messages/messages_zh_CN.properties $KEYCLOAK_HOME/theme/base/login/messages/messages_zh_CN.properties
+> cat messages/messages_en.properties >> $KEYCLOAK_HOME/theme/base/login/messages/messages_en.properties
+> cat messages/messages_zh_CN.properties >> $KEYCLOAK_HOME/theme/base/login/messages/messages_zh_CN.properties
 ```
-  
